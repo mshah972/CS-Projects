@@ -10,9 +10,16 @@
 
 using namespace std;
 
-int main() {
+string studentName;
+int studentID;
+static int studentGrade;
+string studentMajor;
+int creditEarned;
+int creditRequired;
 
-    cout << "HI!" << endl;
+
+
+int main() {
 
     return 0;
 }
