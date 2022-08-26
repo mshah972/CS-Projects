@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -16,10 +17,17 @@ static int studentGrade;
 string studentMajor;
 int creditEarned;
 int creditRequired;
+int userInput;
 
+
+void displayMainMenu();
+int protectData(string);
+void displayStudentMenu();
 
 
 int main() {
+
+    displayMainMenu();
 
     return 0;
 }
@@ -28,11 +36,11 @@ int main() {
 void StudentClasses(string classes, int courseID, string courseLetters, int creditHours, int hallNum, string hallName)
 {
     string Class = classes;
-    int courseID = courseID;
-    string courseLetters = courseLetters;
-    int creditHours = creditHours;
-    int hallNum = hallNum;
-    string hallName = hallName;
+    int CourseID = courseID;
+    string CourseLetters = courseLetters;
+    int CreditHours = creditHours;
+    int HallNum = hallNum;
+    string HallName = hallName;
 
 
     //create a file
@@ -44,5 +52,60 @@ void StudentClasses(string classes, int courseID, string courseLetters, int cred
     outFile << endl;
     outFile.close();
 
+}
+
+void displayMainMenu() {
+
+    system("clear");
+    
+    cout << endl;
+    cout << "********************************************************" << endl;
+    cout << "*        WELCOME TO STUDENT MANAGEMENT PORTAL          *" << endl;
+    cout << "********************************************************" << endl;
+    cout << endl;
+
+    cout << endl;
+    
+    cout << "1. STUDENT LOGIN\n"
+        << "2. TEACHER LOGIN\n"
+        << "3. ADMIN LOGIN\n"
+        << "4. EXIT\n" << endl;
+
+    cout << "\nEnter your choice: ";
+    cin >> userInput;
+    cout << endl;
+
+    switch (userInput) {
+        case 1:
+            displayStudentMenu();
+            break;
+        case 2:
+            cout << "TEACHER LOGIN" << endl;
+            break;
+        case 3:
+            cout << "ADMIN LOGIN" << endl;
+            break;
+        case 4:
+            cout << "EXIT" << endl;
+            break;
+        default:
+            cout << "Invalid choice" << endl;
+            break;
+    }
+
+    cout << endl;
+
+}
+
+void displayStudentMenu() {
+    
+    system("clear");
+    cout << endl;
+    cout << "********************************************************" << endl;
+    cout << "*              WELCOME TO STUDENT PORTAL               *" << endl;
+    cout << "********************************************************" << endl;
+    cout << endl;
+
+    cout << 
 
 }
